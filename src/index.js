@@ -1,21 +1,19 @@
-const weather = (() => {
-  async function getWeather(lat, lon) {
-    try {
-      const url = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=b56e54fcfc83ea96697925d8521b8966`;
-      const response = await fetch(url, { mode: 'cors' });
-      const weatherData = await response.json();
-      console.log(weatherData);
-    } catch (err) {
-      console.log('There was an error', err);
-    }
-  }
-  function success(position) {
-    const lat = position.coords.latitude;
-    const lon = position.coords.longitude;
-    getWeather(lat, lon);
-  }
+import displayController from './dom';
+import handleData from './sanatize-data';
 
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(success);
+async function getWeather(e, units = 'metric') {
+  e.preventDefault();
+  // console.log(displayController.query);
+  const query = displayController.getInput();
+  try {
+    const url = `http://api.openweathermap.org/data/2.5/weather?q=${query}&appid=b56e54fcfc83ea96697925d8521b8966&units=${units}`;
+    const response = await fetch(url, { mode: 'cors' });
+    const weatherData = await response.json();
+    handleData(weatherData);
+  } catch (err) {
+    console.log('There was an error', err);
   }
-})();
+}
+
+const submitBtn = document.querySelector('.submit');
+submitBtn.addEventListener('click', getWeather);
