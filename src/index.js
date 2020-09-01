@@ -15,5 +15,5 @@ async function getWeather(e, units = 'metric') {
   }
 }
 
-const submitBtn = document.querySelector('.submit');
-// submitBtn.addEventListener('click', getWeather);
+const submitForm = document.querySelector('.loc-form');
+submitForm.addEventListener('submit', getWeather);
