@@ -1,8 +1,9 @@
 import displayController from './dom';
 import handleData from './sanatize-data';
 
-async function getWeather(e, units = 'metric') {
+async function getWeather(e) {
   e.preventDefault();
+  const units = displayController.getUnit();
   const query = displayController.getInput();
   try {
     const url = `http://api.openweathermap.org/data/2.5/weather?q=${query}&appid=b56e54fcfc83ea96697925d8521b8966&units=${units}`;

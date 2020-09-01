@@ -1,4 +1,6 @@
 const displayController = (() => {
+  const unitToggle = document.querySelector('.unit-toggle');
+
   const displayCard = (weatherObj) => {
     const container = document.querySelector('.container');
     const card = document.createElement('div');
@@ -7,9 +9,15 @@ const displayController = (() => {
         <img src="#" class="card-img-top" alt="..." />
         <div class="card-body">
           <h5 class="card-title">Location: ${weatherObj.location}</h5>
-          <span class="card-text">Feels like: ${weatherObj.feelsLike}<sup> o</sup>C</span>
-          <span>Low: ${weatherObj.tempMin}<sup> o</sup>C</span>
-          <span>High: ${weatherObj.tempMax}<sup> o</sup>C</span>
+          <span class="card-text">Feels like: ${
+            weatherObj.feelsLike
+          }<sup> o</sup>${unitToggle.checked ? 'C' : 'F'}</span>
+          <span>Low: ${weatherObj.tempMin}<sup> o</sup>${
+      unitToggle.checked ? 'C' : 'F'
+    }</span>
+          <span>High: ${weatherObj.tempMax}<sup> o</sup>${
+      unitToggle.checked ? 'C' : 'F'
+    }</span>
 
         </div>
         <div class="card-footer">
@@ -25,7 +33,14 @@ const displayController = (() => {
     return input.value.toLowerCase();
   }
 
-  return { getInput, displayCard };
+  function getUnit() {
+    if (unitToggle.checked) {
+      return 'metric';
+    }
+    return 'imperial';
+  }
+
+  return { getInput, displayCard, getUnit };
 })();
 
 export default displayController;
