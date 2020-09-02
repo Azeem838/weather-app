@@ -1,12 +1,13 @@
 const displayController = (() => {
   const unitToggle = document.querySelector('.unit-toggle');
+  const error = document.getElementById('error');
+  const container = document.querySelector('.container.cards');
 
   const displayCard = (weatherObj) => {
-    const container = document.querySelector('.container');
+    clearFields();
     const card = document.createElement('div');
     card.classList.add('card');
     card.innerHTML = `
-        <img src="#" class="card-img-top" alt="..." />
         <div class="card-body">
           <h5 class="card-title">Location: ${weatherObj.location}</h5>
           <span class="card-text">Feels like: ${
@@ -21,7 +22,7 @@ const displayController = (() => {
 
         </div>
         <div class="card-footer">
-          <small class="text-muted">Humidity: ${weatherObj.humidity}</small>
+          <small class="text-muted">Humidity: ${weatherObj.humidity}%</small>
           <small class="text-muted">Wind speed: ${weatherObj.windSpeed}</small>
         </div>
     `;
@@ -40,7 +41,17 @@ const displayController = (() => {
     return 'imperial';
   }
 
-  return { getInput, displayCard, getUnit };
+  const displayError = () => {
+    error.innerText =
+      'There was an error getting the weather. Please make sure you entered a location and try again';
+  };
+
+  const clearFields = () => {
+    error.innerText = '';
+    container.innerHTML = '';
+  };
+
+  return { getInput, displayCard, getUnit, displayError };
 })();
 
 export default displayController;

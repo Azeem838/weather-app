@@ -15,17 +15,15 @@
     <div class="container">
       <form class="loc-form mt-4">
         <div class="form-group">
-          <label for="location">Location</label>
+          <label for="location">City</label>
           <input
             type="text"
             class="search form-control"
             id="location"
-            placeholder="Please enter a location e.g: 'New York'"
+            placeholder="Please enter a city e.g: 'New York'"
             required
           />
-          <small id="emailHelp" class="form-text text-muted"
-            >Please enter your location</small
-          >
+          <small id="error" class="form-text text-danger"></small>
         </div>
         <button type="submit" class="submit btn btn-primary">
           Get weather!
@@ -42,6 +40,8 @@
         <label class="custom-control-label" for="customSwitch1">Units</label>
       </div>
     </div>
+
+    <div class="container cards"></div>
 
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

@@ -12,7 +12,7 @@ async function getWeather(e) {
     const data = handleData(result);
     displayController.displayCard(data);
   } catch (err) {
-    console.log('There was an error', err);
+    displayController.displayError();
   }
 }
 
