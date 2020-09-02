@@ -2,6 +2,7 @@ const displayController = (() => {
   const unitToggle = document.querySelector('.unit-toggle');
   const error = document.getElementById('error');
   const container = document.querySelector('.container.cards');
+  const toggleUnitsLabel = document.querySelector('.units-label');
 
   const clearFields = () => {
     error.innerText = '';
@@ -51,7 +52,15 @@ const displayController = (() => {
       'There was an error getting the weather. Please make sure you entered a location and try again';
   };
 
-  return { getInput, displayCard, getUnit, displayError };
+  const changeUnitsLabel = () => {
+    if (unitToggle.checked) {
+      toggleUnitsLabel.innerHTML = 'Metric';
+    } else {
+      toggleUnitsLabel.innerHTML = 'Imperial';
+    }
+  };
+
+  return { getInput, displayCard, getUnit, displayError, changeUnitsLabel };
 })();
 
 export default displayController;
