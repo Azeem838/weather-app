@@ -1,65 +1,54 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# JavaScript Weather App - Working with APIs
 
-> One paragraph statement about the project.
+> Display weather data for your location using JavaScript.
 
-![screenshot](./app_screenshot.png)
+![screenshot](./weather-app-screenshot.png)
 
-Additional description about the project and its features.
+This app was built with JavaScript and Bootstrap. Allow your location in Browser to get weather updates without searching!
 
 ## Built With
 
-- Major languages,
-- frameworks,
-- technologies used
+- JavaScript
+- WebPack
+- Openweathermap API
+- Bootstrap for styling
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
-
+_NOT AVAILABLE UNTIL MERGED WITH MASTER_
 
 ## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
 
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
+Have a browser installed
+
 ### Setup
 
-### Install
+Clone this repo with <code>git clone git@github.com:Azeem838/weather-app.git</code>
 
 ### Usage
 
-### Run tests
-
-### Deployment
-
-
+1. <code>cd</code> into the project directory
+2. run <code>npm install</code>
+3. Open index.html in the dist/ folder in a browser and enjoy :smiley:
 
 ## Authors
 
-👤 **Author1**
+:bust_in_silhouette: **Azeem Ahmed**
 
-- Github: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- Linkedin: [linkedin](https://linkedin.com/linkedinhandle)
-
-👤 **Author2**
-
-- Github: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- Linkedin: [linkedin](https://linkedin.com/linkedinhandle)
+- Github: [@Azeem838](https://github.com/Azeem838)
+- LinkedIn: [Azeem Ahmed](www.linkedin.com/in/azeemmahmed)
 
 ## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check the [issues page](issues/).
+Feel free to check the [issues page](https://github.com/Azeem838/restaurant-page/issues).
 
 ## Show your support
 
