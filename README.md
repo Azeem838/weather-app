@@ -17,7 +17,7 @@ This app was built with JavaScript and Bootstrap. Allow your location in Browser
 
 ## Live Demo
 
-[Live Demo Link](https://rawcdn.githack.com/Azeem838/weather-app/38cd3fd21d04c9c4d1bb70a69ee1c5754e20b30f/dist/index.html)
+[Live Demo Link](https://rawcdn.githack.com/Azeem838/weather-app/1562dcf2bde0697fc66926035471d9d7c13f5b4f/dist/index.html)
 
 ## Getting Started
 
