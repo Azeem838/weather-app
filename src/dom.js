@@ -3,6 +3,11 @@ const displayController = (() => {
   const error = document.getElementById('error');
   const container = document.querySelector('.container.cards');
 
+  const clearFields = () => {
+    error.innerText = '';
+    container.innerHTML = '';
+  };
+
   const displayCard = (weatherObj) => {
     clearFields();
     const card = document.createElement('div');
@@ -44,11 +49,6 @@ const displayController = (() => {
   const displayError = () => {
     error.innerText =
       'There was an error getting the weather. Please make sure you entered a location and try again';
-  };
-
-  const clearFields = () => {
-    error.innerText = '';
-    container.innerHTML = '';
   };
 
   return { getInput, displayCard, getUnit, displayError };

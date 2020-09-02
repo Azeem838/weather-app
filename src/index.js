@@ -1,6 +1,6 @@
 import displayController from './dom';
 import handleData from './sanatize-data';
-
+require('./style.scss');
 async function getWeather(e) {
   e.preventDefault();
   const units = displayController.getUnit();
