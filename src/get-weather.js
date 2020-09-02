@@ -9,6 +9,7 @@ import handleData from './sanatize-data';
       const result = await response.json();
       const data = handleData(result);
       displayController.displayCard(data);
+      displayController.getGif(data.weatherStatus);
     } catch (err) {
       displayController.displayError();
     }
@@ -35,6 +36,7 @@ async function cityWeather(e) {
     const result = await response.json();
     const data = handleData(result);
     displayController.displayCard(data);
+    displayController.getGif(data.weatherStatus);
   } catch (err) {
     displayController.displayError();
   }

@@ -6,6 +6,7 @@ const handleData = (data) => {
     feelsLike: data.main.feels_like,
     humidity: data.main.humidity,
     location: data.name,
+    weatherStatus: data.weather[0].main,
   };
   return a;
 };
