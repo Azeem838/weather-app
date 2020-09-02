@@ -1,7 +1,7 @@
 import displayController from './dom';
 import handleData from './sanatize-data';
 
-const geoWeather = (() => {
+(() => {
   async function getWeather(lat, lon, units = 'metric') {
     try {
       const url = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=b56e54fcfc83ea96697925d8521b8966&units=${units}`;

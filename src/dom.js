@@ -17,14 +17,14 @@ const displayController = (() => {
         <div class="card-body">
           <h5 class="card-title">Location: ${weatherObj.location}</h5>
           <span class="card-text">Feels like: ${
-            weatherObj.feelsLike
-          }<sup> o</sup>${unitToggle.checked ? 'C' : 'F'}</span>
+  weatherObj.feelsLike
+  }<sup> o</sup>${unitToggle.checked ? 'C' : 'F'}</span>
           <span>Low: ${weatherObj.tempMin}<sup> o</sup>${
-      unitToggle.checked ? 'C' : 'F'
-    }</span>
+    unitToggle.checked ? 'C' : 'F'
+  }</span>
           <span>High: ${weatherObj.tempMax}<sup> o</sup>${
-      unitToggle.checked ? 'C' : 'F'
-    }</span>
+    unitToggle.checked ? 'C' : 'F'
+  }</span>
 
         </div>
         <div class="card-footer">
@@ -48,8 +48,7 @@ const displayController = (() => {
   }
 
   const displayError = () => {
-    error.innerText =
-      'There was an error getting the weather. Please make sure you entered a location and try again';
+    error.innerText = 'There was an error getting the weather. Please make sure you entered a location and try again';
   };
 
   const changeUnitsLabel = () => {
@@ -60,7 +59,9 @@ const displayController = (() => {
     }
   };
 
-  return { getInput, displayCard, getUnit, displayError, changeUnitsLabel };
+  return {
+    getInput, displayCard, getUnit, displayError, changeUnitsLabel,
+  };
 })();
 
 export default displayController;
