@@ -58,19 +58,10 @@ const displayController = (() => {
     }
   };
 
-  const getGif = (val) => {
+  const displayGif = (srcURL) => {
     const img = document.createElement('img');
-    fetch(
-      `https://api.giphy.com/v1/gifs/translate?api_key=bb2006d9d3454578be1a99cfad65913d&s=${val}`,
-      { mode: 'cors' },
-    )
-      .then((response) => response.json())
-      .then((response) => {
-        img.src = response.data.images.original.url;
-      })
-      .catch(() => {
-        img.innerHTML = 'There was an error retrieving a gif';
-      });
+    img.src = srcURL;
+
     container.appendChild(img);
   };
 
@@ -80,7 +71,7 @@ const displayController = (() => {
     getUnit,
     displayError,
     changeUnitsLabel,
-    getGif,
+    displayGif,
   };
 })();
 
