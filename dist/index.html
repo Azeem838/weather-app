@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center text-primary">Get the latest weather!</h1>
+      <form class="loc-form mt-4">
+        <div class="form-group">
+          <label for="location">City</label>
+          <input
+            type="text"
+            class="search form-control"
+            id="location"
+            placeholder="Please enter a city e.g: 'New York'"
+            required
+          />
+          <small id="error" class="form-text text-danger"></small>
+        </div>
+        <button type="submit" class="submit btn btn-primary">
+          Get weather!
+        </button>
+      </form>
+
+      <div class="custom-control custom-switch mt-3">
+        <input
+          type="checkbox"
+          class="custom-control-input unit-toggle"
+          id="customSwitch1"
+          checked
+        />
+        <label class="units-label custom-control-label" for="customSwitch1"
+          >Please toggle units</label
+        >
+      </div>
+    </div>
+
+    <div class="container cards d-flex justify-content-between"></div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+    <script src="main.js"></script>
+  </body>
+</html>
